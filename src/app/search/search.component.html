@@ -1,0 +1,10 @@
+<div class="search-wrapper">
+  <input
+    [(ngModel)]="searchFilter"
+    (keyup)="onKeyup($event)"
+    type="text"
+    id="search"
+    placeholder="Search..."
+  />
+  <button class="icon" (click)="clear()"><i class="fa fa-remove icon-remove"></i></button>
+</div>

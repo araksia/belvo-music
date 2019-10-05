@@ -1,0 +1,20 @@
+
+<div class="album-item" (click)="onGetTracks(album)">
+ 
+  <div class="album-img">
+    <img [src]="album.cover" />
+
+  </div>
+  
+  <div class="album-card">
+    
+      <div class="name">{{ album.albumName }}</div>
+      <div class="bottom">
+          <div class="artist">
+              {{ album.artist }}
+          </div>
+         
+      </div>
+
+  </div>
+</div>

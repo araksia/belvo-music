@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="searchbar">
+    <app-search></app-search>
+  </div>
+  <div class="album-wrapper">
+
+    <div class="list-wrapper" *ngIf="!loading">
+      <div class="row" *ngIf="filteredAlbums.length; else elseBlock">
+        <app-album-item class="col-md-2 col-sm-4 col-xs-6" *ngFor="let album of filteredAlbums" [album]="album">
+        </app-album-item>
+      </div>
+      <ng-template #elseBlock>
+        <div class="no-result">No results found...</div>
+      </ng-template>
+    </div>
+  </div>
+</div>
+<ngx-loading [show]="loading"></ngx-loading>

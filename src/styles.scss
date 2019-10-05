@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+$font-stack: "Roboto", sans-serif;
+$primary-color: #0079BF;
+$secondary-color: #50FCA3;
+$font-color: #000;
+$highlight-color: #00649E;
+
+body {
+  font-family: $font-stack;
+  color: $font-color;
+}
