@@ -14,20 +14,17 @@ export class AlbumItemComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private albumStorage: AlbumStorage) { }
   albumId: string;
   albumName: string;
- 
+
 
   ngOnInit() {
 
     this.route.params.subscribe(param => {
       this.albumId = param.albumId;
-      this.albumName = param.albumId;
-
     });
-  
+
   }
-   public onGetTracks(album) {
+  public onGetTracks(album) {
     this.albumStorage.storage = this.album;
-        this.router.navigate([ album.albumId,
-          album.albumId]);
-    }
+    this.router.navigate([album.albumId]);
+  }
 }

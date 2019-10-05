@@ -6,7 +6,7 @@ import { AlbumListComponent } from './album-list/album-list.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: AlbumListComponent},
-  { path: ':id/:name', component: AlbumDetailsComponent },
+  { path: ':id', component: AlbumDetailsComponent },
   { path: '***', redirectTo: '/', pathMatch: 'full' },
 ];
 

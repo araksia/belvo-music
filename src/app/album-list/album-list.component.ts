@@ -13,9 +13,9 @@ export class AlbumListComponent implements OnInit {
   albumArray: Array<any> = [];
   albums: Album[] = [];
   filteredAlbums: Album[] = [];
-  albumsCount:number = 100;
+  albumsCount: number = 100;
 
-  constructor(private albumsService: AlbumsService, private fs: SearchService) {}
+  constructor(private albumsService: AlbumsService, private fs: SearchService) { }
 
   ngOnInit() {
     this.fs.currentFilter.subscribe(filter => {
@@ -41,7 +41,7 @@ export class AlbumListComponent implements OnInit {
     this.loading = true;
     this.albumsService.getAlbums(this.albumsCount).subscribe(result => {
       result.entry.forEach(element => {
-        
+
         const album: Album = new Album(
           element.id.attributes["im:id"],
           element["im:name"].label,
@@ -54,7 +54,7 @@ export class AlbumListComponent implements OnInit {
       });
       this.filteredAlbums = this.albums;
     });
-  
+
   }
-  
+
 }

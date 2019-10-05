@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';  
+import { Router } from '@angular/router';
 import { AlbumStorage } from "../_providers/albumStorage.provider";
 import { Album } from "../_models/album.model";
 
@@ -10,21 +10,21 @@ import { Album } from "../_models/album.model";
   styleUrls: ['./album-details.component.scss']
 })
 export class AlbumDetailsComponent implements OnInit {
-public model: Album;
-  constructor(private route: ActivatedRoute, private router: Router, private albumStorage: AlbumStorage) { 
-    if(typeof this.albumStorage.storage == 'undefined'){
+  public model: Album;
+  constructor(private route: ActivatedRoute, private router: Router, private albumStorage: AlbumStorage) {
+    if (typeof this.albumStorage.storage == 'undefined') {
       this.router.navigate(['/']);
       return;
     }
-   this.model = this.albumStorage.storage;
+    this.model = this.albumStorage.storage;
 
   }
 
   ngOnInit() {
 
   }
- sendMeHome() {
+  sendMeHome() {
     this.router.navigate(['']);
   }
-  
+
 }
