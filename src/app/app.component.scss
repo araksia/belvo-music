@@ -7,16 +7,19 @@
     font-size:55px;
     width:300px;
     height: 100px;
-
     margin: 0 auto;
 }
-
+.title-explorer {
+    display: none;
+}
 .text-copy {
     fill: none;
     stroke: white;
     stroke-dasharray: 6% 29%;
     stroke-width: 3px;
     stroke-dashoffset: 0%;
+    -moz-animation: stroke-offset 5.5s infinite linear;
+    -webkit-animation: stroke-offset 5.5s infinite linear;
     animation: stroke-offset 5.5s infinite linear;
 }
 
@@ -48,6 +51,11 @@
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
 }
+@-moz-keyframes stroke-offset {
+    100% {stroke-dashoffset: -35%;}}
+}
+@-webkit-keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
 }
 :focus {
     outline-color: transparent;

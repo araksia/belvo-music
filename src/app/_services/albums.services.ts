@@ -14,7 +14,7 @@ getAlbums(limit: number) {
       'jsonp'
     )
     .pipe( 
-      map(data => {
+      map(data => 
         return data['feed'];
       })
     );

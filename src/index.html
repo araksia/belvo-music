@@ -6,9 +6,17 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+  <style>
+    @media all and (-ms-high-contrast:none)
+     {
+     .title svg .text-copy{ fill: #0079bf !important } /* IE10 */
+     *::-ms-backdrop, .title svg .text-copy { fill: #0079bf !important } /* IE11 */
+     }
+  </style>
 </head>
 <body>
   <app-root></app-root>

@@ -32,11 +32,13 @@ export class AlbumListComponent implements OnInit {
         }
       });
     });
+
     this.getAlbum();
-    
+    this.loading = false;
 
   }
   getAlbum() {
+    this.loading = true;
     this.albumsService.getAlbums(this.albumsCount).subscribe(result => {
       result.entry.forEach(element => {
         
@@ -52,6 +54,7 @@ export class AlbumListComponent implements OnInit {
       });
       this.filteredAlbums = this.albums;
     });
+  
   }
-
+  
 }
